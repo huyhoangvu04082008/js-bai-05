@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài 5 - Hiệu ứng jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 450px;
+        margin: 40px auto;
+      }
+      #hopNoiDung {
+        padding: 20px;
+        background: #d1e7dd;
+        border: 1px solid #0f5132;
+        margin-top: 15px;
+      }
+      button {
+        padding: 8px 12px;
+        margin: 3px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Demo Hiệu ứng jQuery</h3>
+    <button id="btnHide">Ẩn (hide)</button>
+    <button id="btnShow">Hiện (show)</button>
+    <button id="btnSlide">Trượt (slideToggle)</button>
+    <button id="btnColor">Đổi màu CSS</button>
+
+    <div id="hopNoiDung">
+      Đây là khối nội dung minh họa các phương thức hiệu ứng và thao tác CSS cơ
+      bản trong thư viện jQuery.
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#btnHide").click(function () {
+          $("#hopNoiDung").hide(300);
+        });
+        $("#btnShow").click(function () {
+          $("#hopNoiDung").show(300);
+        });
+        $("#btnSlide").click(function () {
+          $("#hopNoiDung").slideToggle(300);
+        });
+        $("#btnColor").click(function () {
+          $("#hopNoiDung").css({
+            "background-color": "#fff3cd",
+            "border-color": "#664d03",
+            "font-weight": "bold",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
